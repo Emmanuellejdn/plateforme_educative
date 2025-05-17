@@ -1,3 +1,11 @@
+<?php
+session_start();
+if (!isset($_SESSION['auth']) || $_SESSION['auth'] !== true) {
+    header('Location: connexion.php');
+    exit();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

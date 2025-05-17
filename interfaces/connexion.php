@@ -1,5 +1,5 @@
 <?php
-include '../backend/backins.php';
+include '../backend/backconnexion.php';
 ?>
 
 <!DOCTYPE html>
@@ -47,6 +47,7 @@ include '../backend/backins.php';
     </div>
 </section>
       
+<?php if (isset($errorMsg)) { echo '<p style="color:red;text-align:center;">' . $errorMsg . '</p>'; } ?>
 
 </body>
 </html>
