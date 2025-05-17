@@ -1,0 +1,407 @@
+:root{
+    /* --blue: rgba(0,0,255,1); */
+    /* --black: #020202;
+    --darkgreen: #0D2818;
+    --forestgreen: #04471C;
+    --greenpolice: #0A9548;
+    --greenclair: #16DB65; */
+}
+* {
+    outline: 0;
+    margin: 0 ;
+    padding: 0;
+    
+}
+
+
+body{  
+   width: 100%;
+   overflow-x: hidden;
+   position: relative;
+   background-color: rgb(235, 235, 222);
+}
+header{ 
+
+}
+/* barre de navigation */
+ .navbar{
+    margin: 0 80px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 100px;
+    font-size: 20px;
+
+    /* width: 100%; */
+    /* position: sticky; */
+ }
+
+ /* debut animation du logo */
+ .navbar-logos{
+   animation: logo 4s ease;
+ }
+ @keyframes logo{
+   from{
+      transform: translateX(-50%);
+      opacity: 0;
+   }to{
+      transform: translateX(0);
+      opacity: 1;
+   }
+ }
+/* fin animation du logo */
+
+ .navbar-logos p{
+    font-size: 27px;
+ }
+ 
+ .navbar-logos p span {
+   color: orangered;
+    font-size: 45px;
+ }
+ .navbar-liens{
+    display: flex;
+    gap: 5rem;
+    animation: liens 3.5s ease;
+ }
+ 
+ /* les liens de la navbar */
+ .l1{
+   text-decoration: none;
+    color: var(--black);
+    font-size: 20px;
+}
+.l2{
+   text-decoration: none;
+    color: var(--black);
+    font-size: 20px;
+}
+.l3{
+   text-decoration: none;
+    color: var(--black);
+    font-size: 20px;
+}
+/* hover des liens */
+.l1:hover{
+   color: orangered;
+   font-size: 22px;
+   transition: 0.5s  ease-in-out;
+}
+.l2:hover{
+   color: orangered;
+   font-size: 22px;
+   transition: 0.5s  ease-in-out;
+}
+.l3:hover{
+   color: orangered;
+   font-size: 22px;
+   transition: 0.5s  ease-in-out;
+}
+ 
+
+ @keyframes liens{
+   from{
+      transform: translateX(30%);
+      opacity: 0;
+   }
+   to{
+      transform: translateX(0%);
+      opacity: 1;
+   }
+ }
+header .navbar .navbar-liens a button {
+   width: 7rem;
+   height: 2rem;
+   background-color:orangered;
+   color: white;
+   border: none;
+   border-radius: 15px;
+   font-size: 15px;
+}
+/* hover du boutton */
+header .navbar .navbar-liens a button:hover{
+   color: orangered;
+   background-color: whitesmoke;
+   transition: 0.6s  ease-in-out;
+}
+ 
+ /* fin barre de navigation */
+
+ /*  debut Carousel */
+
+ .carousel-inner{
+   display: flex;
+   gap: -100px;
+   transition: transform 1.5s ease;
+   width: 100%;
+   /* overflow: hidden; */
+ }
+ .carousel-item{
+   position: relative;
+   min-width: 100%;
+   flex: 0 0 100%;
+   box-sizing: border-box;
+ }
+ .carousel img{
+   width: 100%;
+   height: auto;
+   display: block;
+ }
+
+.carousel-caption{
+   position: absolute;
+   bottom: 7em;
+   left: 5em;
+   color: whitesmoke ;
+   z-index: 2;
+   animation: carouselanim 4s ease;
+}
+
+@keyframes carouselanim {
+   from{
+      transform: translateY(-50%);
+      opacity: 0;
+   }to{
+      transform: translateY(0);
+      opacity: 1;
+   }
+ }
+
+
+
+.carousel-caption h1{
+   color:orangered;
+   font-size: 50px;
+   z-index: 2;
+}
+
+.carousel-caption p{
+   font-size: 20px;
+}
+
+.gradient-overlay{ /*assombrissement du carousel*/
+   position: absolute;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   background: rgba(0, 0, 0, 0.349);
+   z-index: 1;
+}
+/* fin carousel */
+
+/* resume de l'apropos */
+.resume_apropos{
+
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   margin: 0 80px;
+   margin-bottom: 5rem;
+   font-size: 19px;
+}
+
+.resume_apropos_left p{
+   font-size: 22px;
+   font-weight: bolder;
+}
+
+.resume_apropos_right{
+   display: flex;
+   flex-direction: column;
+   gap: 1.5rem;
+}
+
+.resume_apropos_right button{
+   width: 6rem;
+   height: 2rem;
+   font-size: 15px;
+   border: 1px solid olivedrab;
+   border-radius: 15px;
+   background-color: var(--forestgreen);
+   color:olivedrab;
+}
+
+.resume_apropos_right button:hover{
+   background-color:olivedrab;
+   color: white;
+}
+
+.solutions{
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   z-index: 1000;
+   
+}
+.solutions div{
+   mix-blend-mode: multiply;
+   flex-shrink: 0;
+   padding: 10px;
+   z-index: 1000;
+}
+
+.S1{
+   background: orchid;
+   border-radius: 60% 40% 70% 30% / 30% 30% 70% 70%;
+   height: 12rem;
+   width: 15rem;
+   margin-right: -10px;
+   /* flex-shrink: 0; */
+   z-index: 1000;
+}
+
+
+.S2{
+   background: olivedrab;
+   border-radius: 16% 84% 16% 84% / 52% 59% 41% 48%;
+   height: 12rem;
+   width: 15rem;
+   margin-right: -10px;
+}
+
+.S3{
+   background: orangered;
+   border-radius: 48% 52% 60% / 87% 59% 41% 13%;
+   height: 12rem;
+   width: 15rem;
+  
+}
+.solutions p{
+   margin-top: 33%;
+   margin-left: 5%;
+   
+}
+.presentations{
+   background-color:#dad9d7;
+   width: 95%;
+   height: 40rem;
+   position: absolute;
+   left: 2rem;
+   top: 67rem;
+   z-index: 0;
+}
+
+.anglais ,.francais ,.locales{
+   height: 12rem;
+   width: 47%;
+   margin: 18px;
+   border-radius: 10px;
+   display: flex;
+   flex-direction: row;
+   
+}
+
+.anglais{
+   background-color: white;
+   /* background-color:orangered; */
+   animation: anglais 10s infinite;
+   box-shadow: 5px 5px 10px orangered;
+}
+
+@keyframes anglais {
+    0%{
+        transform: translateX(70px);
+    }
+    25%{
+        transform: translateX(5);
+    }
+    50%{
+        transform: translateX(-10px);
+    }
+    75%{
+        transform: translateX(-5);
+    }
+    100%{
+        transform: translateX(80px);
+    }
+}
+
+.francais{
+   background-color: white;
+   /* background-color: orchid; */
+   position: relative;
+   left: 50%;
+   animation: francais 10s infinite;
+   box-shadow: 5px 5px 10px orchid;
+}
+@keyframes francais {
+    0%{
+        transform: translateX(-70px);
+    }
+    25%{
+        transform: translateX(-5);
+    }
+    50%{
+        transform: translateX(10px);
+    }
+    75%{
+        transform: translateX(5);
+    }
+    100%{
+        transform: translateX(-80px);
+    }
+}
+
+.locales{
+   background-color: white;
+   /* background-color: olivedrab; */
+   animation: locales 10s infinite;
+   box-shadow: 5px 5px 10px olivedrab;
+}
+@keyframes locales {
+    0%{
+        transform: translateX(70px);
+    }
+    25%{
+        transform: translateX(5);
+    }
+    50%{
+        transform: translateX(-10px);
+    }
+    75%{
+        transform: translateX(-5);
+    }
+    100%{
+        transform: translateX(80px);
+    }
+}
+ .presentations div img{
+   border-radius: 10px 0px 0px 10px;
+ }
+.presentations .anglais .txt{
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.904); */
+    border-left: 1.5px solid orangered;
+    clip-path: inset(10px 0 10px 0);
+    padding: 10px;
+}
+.presentations .francais .txt{
+   border-left: 1.5px solid orchid;
+    clip-path: inset(10px 0 10px 0);
+    padding: 10px;
+}
+.presentations .locales .txt{
+   border-left: 1.5px solid olivedrab;
+    clip-path: inset(10px 0 10px 0);
+    padding: 10px;
+}
+
+.presentations p{
+   margin-top: 30px;
+   font-size: 19px;
+   
+}
+
+
+
+
+
+ *::-webkit-scrollbar{
+   width: 1px;
+   
+   
+}
+*::-webkit-scrollbar-track{
+   background-color: transparent;
+}

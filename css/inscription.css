@@ -1,0 +1,135 @@
+/* :root{
+    --black: #020202;
+    --darkgreen: #0D2818;
+    --forestgreen: #04471C;
+    --greenpolice: #0A9548;
+    --greenclair: #16DB65;
+} */
+
+* {
+    outline: 0;
+    margin: 0 ;
+    padding: 0;
+       
+}
+
+body{
+    /* background-image: url(../images/WhatsApp\ Image\ 2025-05-13\ à\ 15.35.46_8bafb41f.jpg); */
+    /* background-color: #F1F1F1; */
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+/* .container{
+    display: flex;
+    flex-direction: row;
+    gap: -20px;
+} */
+
+.left{
+    /* margin-left: 60px; */
+    width: 100%;
+}
+/*  */
+ .container .form_container  {
+    position: absolute;
+    left: 45rem;
+    top: 2rem;
+    width: 90%;
+    height: 30rem;
+    background:transparent;
+    width: 30rem;
+    /* margin-right: 10%; */
+    /* margin-top: 10%; */
+    backdrop-filter: blur(25px) opacity(1) grayscale(2);
+    border-radius: 10px;
+}
+
+/*  */
+.container .form_container legend{ 
+    font-size: 25px;
+}
+/*  */
+.container .form_container  legend span{
+    color: orangered;
+}
+
+.box{
+    margin-top: 3rem;
+}
+/* les labels et input */
+
+.username, .adresse, .mdp{
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    font-size: 18px;
+    gap: 2px;
+}
+.checkbox{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 3px;
+}
+/*  */
+ .container .form_container input{
+    height: 1.8rem;
+    border-radius: 5px;
+    border: none;
+    background-color: #f1f1f1;
+ }
+
+ /*  */
+ .container .form_container  input:focus{
+    box-shadow: inset 3px 3px 2px rgba(0, 0, 0, 0.265);
+ }
+
+/*  */
+ .container .form_container  input::placeholder{
+    padding-left: 10px;
+   
+ }
+
+ /*  */
+ .container .form_container  button{
+    width: 9rem;
+    height: 2rem;
+    margin-left: 30%;
+    background-color: orangered;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    font-size: 17px;
+ }
+
+ /*  */
+ .container .form_container  button:hover{
+    border:1px solid orangered;
+    background-color: white;
+    color: orangered;
+    cursor: pointer;
+ }
+/*  */
+ .container .form_container  p{
+    margin-left: 15%;
+ }
+
+ .container .form_container  p a{
+   text-decoration: none;
+   color: orangered;
+ }
+ .container .form_container  p a:hover{
+    /* color: orangered; */
+    font-size: 17px;
+ }
+
+*::-webkit-scrollbar{
+   width: 1px;
+   
+   
+}
+*::-webkit-scrollbar-track{
+   background-color: transparent;
+}

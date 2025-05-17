@@ -1,0 +1,106 @@
+*::-webkit-scrollbar{
+   width: 1px;
+   
+   
+}
+*::-webkit-scrollbar-track{
+   background-color: transparent;
+}
+* {
+    outline: 0;
+    margin: 0 ;
+    padding: 0;
+}
+body{
+    background-color: #dbdbdb;
+}
+.container{
+    display: flex;
+    flex-direction: row;
+}
+.sidebar {
+  width: 200px;
+  background-color: orangered;
+  color: #fff;
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+}
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar li {
+  margin-left: 25px;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.sidebar a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.content {
+  border-radius: 5px;
+  margin-left: 200px;
+  padding: 20px;
+  position: relative;
+}
+.videos{
+    background-color:white;
+    position: absolute;
+    left: 5rem;
+    width: 38rem;
+    height:70vh ;
+}
+ video{
+    position: absolute;
+    /* border-radius: 5px 0px 0px 0px; */
+ }
+
+.courtitle{
+    background-color: white;
+    position: absolute;
+    height: 23vh;
+    width: 38rem;
+    left: 5rem;
+    top: 27.6rem;
+    border-top: 1px solid black;
+}
+.courtitle h2{
+  color: orangered;
+  margin-top: 15px;
+  margin-left: 10%;
+}
+.courtitle .avis{
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  margin-top: 10px;
+  margin-left: 10%;
+}
+
+.courlist{
+    background-color: white;
+    position: absolute;
+    left: 43rem;
+    width: 20rem;
+    height: 93vh;
+}
+.lec{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 11%;
+  margin-left: 20px;
+  font-size: 16px;
+
+}
