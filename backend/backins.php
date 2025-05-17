@@ -18,7 +18,7 @@ if(isset($_POST['validate'])){
             $insertUserOnWebsite = $bdd->prepare('INSERT INTO utilisateur(nom,email,motdepasse)VALUES(?, ?, ?)');
             $insertUserOnWebsite ->execute(array($user_username, $user_aemail, $user_mdp));
 
-        // authentification
+        // creation de compte
         $getInfosOfThisUser = $bdd ->prepare('SELECT id, nom, email FROM utilisateur WHERE nom = ? AND email = ? ');
         $getInfosOfThisUser->execute(array($user_username, $user_aemail));
 
