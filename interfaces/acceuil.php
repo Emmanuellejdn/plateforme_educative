@@ -123,11 +123,11 @@ if (!isset($_SESSION['auth']) || $_SESSION['auth'] !== true) {
 <section class="presentations">
    <div class="anglais">
     <img src="../images/a-book-7010438_1280.webp" alt="" height="100%" width="65%">
-    <div class="txt"> <p>Aprrentissage spécialisé en français quand vous voulez, où vous voulez à partir de <a href="">Maintenant</a></p></div>
+    <div class="txt"> <p>Aprrentissage spécialisé en français quand vous voulez, où vous voulez à partir de <a href="coursfr.php">Maintenant</a></p></div>
    </div>
    <div class="francais">
     <img src="../images/school-7421663_1280.webp" alt="" height="100%" width="65%">
-    <div class="txt"> <p>Specialized English <br> learning  whenever you want,<br> whenever you want, starting <a href="">now</a></p></div>
+    <div class="txt"> <p>Specialized English <br> learning  whenever you want,<br> whenever you want, starting <a href="coursen.php">now</a></p></div>
    </div>
    <div class="locales">
     <img src="../images/ai-generated-9295105_1280.jpg" alt=""height="100%" width="65%">
