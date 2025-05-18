@@ -13,7 +13,7 @@ if (isset($_POST['validate'])) {
 
         if ($checkUser->rowCount() > 0) {
             $user = $checkUser->fetch();
-
+             
             // Vérification du mot de passe
             if (password_verify($user_password, $user['motdepasse'])) {
                 // Authentification réussie, création de la session

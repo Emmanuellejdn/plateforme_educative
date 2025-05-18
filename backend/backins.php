@@ -1,4 +1,3 @@
-
 <?php
 include '../backend/connexionbase.php';
 
@@ -18,18 +17,23 @@ if(isset($_POST['validate'])){
             $insertUserOnWebsite = $bdd->prepare('INSERT INTO utilisateur(nom,email,motdepasse)VALUES(?, ?, ?)');
             $insertUserOnWebsite ->execute(array($user_username, $user_aemail, $user_mdp));
 
-        // creation de compte
-        $getInfosOfThisUser = $bdd ->prepare('SELECT id, nom, email FROM utilisateur WHERE nom = ? AND email = ? ');
-        $getInfosOfThisUser->execute(array($user_username, $user_aemail));
+        // Récupération de l'utilisateur par son ID tout juste inséré
+        $lastUserId = $bdd->lastInsertId();
+        $getInfosOfThisUser = $bdd->prepare('SELECT id, nom, email FROM utilisateur WHERE id = ?');
+        $getInfosOfThisUser->execute(array($lastUserId));
 
-        $userinfos = $getInfosOfThisUser ->fetch();
-
-        $_SESSION['auth'] = true;
-        $_SESSION['id'] = $userinfos['id'];
-        $_SESSION['username'] = $userinfos['nom'];
-        $_SESSION['aemail'] = $userinfos['email'];
-
+        $userinfos = $getInfosOfThisUser->fetch();
+        var_dump($userinfos);
+        if ($userinfos) {
+            $_SESSION['auth'] = true;
+            $_SESSION['id'] = $userinfos['id'];
+            $_SESSION['username'] = $userinfos['nom'];
+            $_SESSION['aemail'] = $userinfos['email'];
             header('Location: ../interfaces/acceuil.php ');
+            exit;
+        } else {
+            $errorMsg = "Erreur lors de la récupération des informations utilisateur.";
+        }
 
         }else{
             $errorMsg = "L'utilisateur existe déjà";
