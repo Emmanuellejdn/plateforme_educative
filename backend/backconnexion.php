@@ -2,7 +2,7 @@
 // session_start();
 include '../backend/connexionbase.php';
 
-if (isset($_POST['username'], $_POST['mdp'])) {
+if (isset($_POST['validate'])) {
     if (!empty($_POST['username']) && !empty($_POST['mdp'])) {
         $user_input = htmlspecialchars($_POST['username']);
         $user_password = $_POST['mdp'];

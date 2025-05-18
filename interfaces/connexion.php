@@ -37,7 +37,7 @@ include '../backend/backconnexion.php';
               <label for="checkbox-id"> afficher le mot de passe</label>
             </div><br>
   
-              <button type="submit">Se connecter </button>
+              <button type="submit" name="validate">Se connecter </button>
   
           </div>
          </div>
