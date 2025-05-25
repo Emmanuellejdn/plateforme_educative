@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,9 +11,16 @@
     <body>
     <div class="container">
         <div class="sidebar">
+
             <ul>
                 <li>
-                    <a href="">Profile</a>
+                    <?php
+                  if(isset($_SESSION['username'])) {
+                    echo "Bienvenue, " . $_SESSION['username'] . "<br>";
+                } else {
+                    echo "Veuillez vous connecter.";
+                }
+             ?>
                     <a href="">My course</a>
                     <a href="">Exams</a>
                     <a href="">Certificate</a>
@@ -23,7 +31,7 @@
         </div>
         <div class="content">
             <div class="videos">
-                <video src="../images/Apprendre le JavaScript  Chapitre 1, Introduction.mp4" width="100%" height="100%"  autoplay loop muted preload="auto"></video>
+                <video src="../images/anglais.mp4" width="100%" height="100%"  autoplay loop muted preload="auto" controls></video>
             </div>
             <div class="courtitle">
                 <h2>Lesson 1 : The Alphabet and Pronunciation</h2>

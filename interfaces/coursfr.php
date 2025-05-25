@@ -22,7 +22,7 @@
         </div>
         <div class="content">
             <div class="videos">
-                <video src="../images/Apprendre le JavaScript  Chapitre 1, Introduction.mp4" width="100%" height="100%"  autoplay loop muted preload="auto"></video>
+                <video src="../images/france.mp4" width="100%" height="100%"  autoplay loop muted preload="auto" controls></video>
             </div>
             <div class="courtitle">
                 <h2>Leçon 1 : L'alphabet et la prononciation</h2>

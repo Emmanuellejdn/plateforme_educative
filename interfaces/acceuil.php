@@ -26,8 +26,15 @@ if (!isset($_SESSION['auth']) || $_SESSION['auth'] !== true) {
         <div class="navbar-liens">
             <a href="#" class="l1">Acceuil</a>
             <a href="#" class="l2">A propos</a>
-            <a href="coursfr.php" class="l3">Cours</a>
+            <!-- <a href="coursfr.php" class="l3">Cours</a> -->
             <!-- <a href="Inscription.php"><button class="boutton_connexion">S'inscrire</button></a> -->
+             <?php
+                  if(isset($_SESSION['username'])) {
+                    echo "Bienvenue, " . $_SESSION['username'] . "<br>";
+                } else {
+                    echo "Veuillez vous connecter.";
+                }
+             ?>
         </div>
         
       </div>
@@ -131,7 +138,7 @@ if (!isset($_SESSION['auth']) || $_SESSION['auth'] !== true) {
    </div>
    <div class="locales">
     <img src="../images/ai-generated-9295105_1280.jpg" alt=""height="100%" width="65%">
-    <div class="txt"> <p>Renouer avec ses racines ? commençons l'aventure <br><a href="">Maintenant</a></p></div>
+    <div class="txt"> <p>Renouer avec ses racines ? commençons l'aventure <br><a href="courslng.php">Maintenant</a></p></div>
    </div>
 </section>
 </main>
