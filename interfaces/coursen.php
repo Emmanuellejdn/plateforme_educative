@@ -20,7 +20,7 @@
                 } else {
                     echo "Veuillez vous connecter.";
                 }
-             ?>
+                ?>
                     <a href="">My course</a>
                     <a href="">Exams</a>
                     <a href="">Certificate</a>
