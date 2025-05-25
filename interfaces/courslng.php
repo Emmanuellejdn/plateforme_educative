@@ -18,7 +18,13 @@ if (!isset($_SESSION['auth']) || $_SESSION['auth'] !== true) {
         <div class="sidebar">
             <ul>
                 <li>
-                    <a href="">Profile</a>
+                        <?php
+                  if(isset($_SESSION['username'])) {
+                    echo "Bienvenue, " . $_SESSION['username'] . "<br>";
+                } else {
+                    echo "Veuillez vous connecter.";
+                }
+                ?>
                     <a href="">Mes cours</a>
                     <a href="">Examens</a>
                     <a href="">Certificats</a>

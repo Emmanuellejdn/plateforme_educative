@@ -12,7 +12,7 @@ include '../backend/backconnexion.php';
 </head>
 <body>
    
-  <img src="../images/istockphoto-175486420-612x612.webp" alt="">  
+  <!-- <img src="../images/istockphoto-175486420-612x612.webp" alt="">   -->
 <section class="container"> 
     
     <div class="form_container">
