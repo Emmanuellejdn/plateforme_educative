@@ -129,27 +129,9 @@ $user = $query->fetch();
                
             </div>
             
-            <?php
-            // Récupérer les cours suivis par l'utilisateur (exemple à adapter selon ta structure de BDD)
-            $coursSuivis = $bdd->prepare("SELECT c.* FROM cours c 
-                                         JOIN cours c ON c.id = c.cours_id 
-                                         WHERE c.utilisateur_id = ? 
-                                         LIMIT 5");
-            $coursSuivis->execute(array($userId));
-            $mesCours = $coursSuivis->fetchAll();
-            ?>
-            
             <div class="cours-list">
                 <h3>Mes derniers cours</h3>
-                <?php if (count($mesCours) > 0): ?>
-                    <ul>
-                        <?php foreach($mesCours as $cours): ?>
-                            <li><?= htmlspecialchars($cours['titre']) ?></li>
-                        <?php endforeach; ?>
-                    </ul>
-                <?php else: ?>
-                    <p>Vous n'avez pas encore suivi de cours.</p>
-                <?php endif; ?>
+                <p>La fonctionnalité de suivi de cours sera bientôt disponible.</p>
             </div>
             
             <div class="actions">

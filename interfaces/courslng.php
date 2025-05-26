@@ -7,12 +7,15 @@ if (!isset($_SESSION['auth']) || $_SESSION['auth'] !== true) {
 include '../backend/connexionbase.php';
 
 // Récupérer les cours de langues locales
-$cours = $bdd->prepare("SELECT * FROM cours WHERE langues = 'lng' ");
+$cours = $bdd->prepare("SELECT * FROM cours WHERE langues = 'lng' ORDER BY date_creation DESC");
 $cours->execute();
 $coursList = $cours->fetchAll();
 
-// Récupérer les examens (tests) liés aux langues locales
-$examens = $bdd->prepare("SELECT * FROM test WHERE titre LIKE '%lng%' ");
+// Récupérer les tests liés aux cours de langues locales
+$examens = $bdd->prepare("SELECT t.*, c.titre as cours_titre FROM test t 
+                         JOIN cours c ON t.cours_id = c.id 
+                         WHERE c.langues = 'lng' 
+                         ORDER BY t.date_creation DESC");
 $examens->execute();
 $examensList = $examens->fetchAll();
 ?>
@@ -63,6 +66,16 @@ $examensList = $examens->fetchAll();
             <div id="cours-section">
                 <div class="videos">
                     <video src="../images/Apprendre le JavaScript  Chapitre 1, Introduction.mp4" width="100%" height="100%"  autoplay loop muted preload="auto" controls></video>
+                    <div class="avis">
+                        <div class="i1">
+                            <img src="../images/pouces-vers-le-haut.png" alt="" width="30px">
+                            <P>J'aime</P>
+                        </div>
+                        <div class="i1">
+                            <img src="../images/bulle.png" alt=""  width="30px">
+                            <p>Commenter</p>
+                        </div>
+                    </div>
                 </div>
                 <div class="courtitle">
                     <h2>Liste des cours de langues locales</h2>

@@ -7,12 +7,15 @@ if (!isset($_SESSION['auth']) || $_SESSION['auth'] !== true) {
 include '../backend/connexionbase.php';
 
 // Récupérer les cours d'anglais
-$cours = $bdd->prepare("SELECT * FROM cours WHERE langues = 'en' ");
+$cours = $bdd->prepare("SELECT * FROM cours WHERE langues = 'en' ORDER BY date_creation DESC");
 $cours->execute();
 $coursList = $cours->fetchAll();
 
-// Récupérer les examens (tests) liés à l'anglais
-$examens = $bdd->prepare("SELECT * FROM test WHERE titre LIKE '%en%' ");
+// Récupérer les tests liés aux cours d'anglais
+$examens = $bdd->prepare("SELECT t.*, c.titre as cours_titre FROM test t 
+                         JOIN cours c ON t.cours_id = c.id 
+                         WHERE c.langues = 'en' 
+                         ORDER BY t.date_creation DESC");
 $examens->execute();
 $examensList = $examens->fetchAll();
 ?>
@@ -64,6 +67,16 @@ $examensList = $examens->fetchAll();
             <div id="cours-section">
                 <div class="videos">
                     <video src="../images/anglais.mp4" width="100%" height="100%"  autoplay loop muted preload="auto" controls></video>
+                    <div class="avis">
+                        <div class="i1">
+                            <img src="../images/pouces-vers-le-haut.png" alt="" width="30px">
+                            <P>Like</P>
+                        </div>
+                        <div class="i1">
+                            <img src="../images/bulle.png" alt=""  width="30px">
+                            <p>Comments</p>
+                        </div>
+                    </div>
                 </div>
                 <div class="courtitle">
                     <h2>List of English courses</h2>

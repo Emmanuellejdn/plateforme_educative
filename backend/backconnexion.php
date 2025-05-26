@@ -1,5 +1,5 @@
 <?php
-// session_start();
+ session_start();
 include '../backend/connexionbase.php';
 
 if (isset($_POST['validate'])) {
