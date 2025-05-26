@@ -132,8 +132,8 @@ $user = $query->fetch();
             <?php
             // Récupérer les cours suivis par l'utilisateur (exemple à adapter selon ta structure de BDD)
             $coursSuivis = $bdd->prepare("SELECT c.* FROM cours c 
-                                         JOIN utilisateur_cours uc ON c.id = uc.cours_id 
-                                         WHERE uc.utilisateur_id = ? 
+                                         JOIN cours c ON c.id = c.cours_id 
+                                         WHERE c.utilisateur_id = ? 
                                          LIMIT 5");
             $coursSuivis->execute(array($userId));
             $mesCours = $coursSuivis->fetchAll();

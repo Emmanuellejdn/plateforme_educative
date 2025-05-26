@@ -128,7 +128,7 @@
 </main>
 
 <footer>
-
+  <p>&copy; 2025 CovoitCamer2.0 - Tous droits réservés</p>
 </footer>
 
 

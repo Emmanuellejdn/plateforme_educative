@@ -1,6 +1,5 @@
 <?php
-session_start();
-
+// session_start();
 $serveur = 'localhost';
 $database = 'education';
 $username = 'root';
